@@ -12,6 +12,8 @@ namespace ConsoleApp3.Data
     public class BlogContext : DbContext
     {
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Blog2> Blog2s { get; set; }
+
         public BlogContext()
         {
 
@@ -20,7 +22,7 @@ namespace ConsoleApp3.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=localhost;TrustServerCertificate=True;User Id=EAD\lpluta;Integrated Security=true;Initial Catalog=Nowa;Connection Timeout=4;");
+                optionsBuilder.UseSqlServer(@"Server=localhost;TrustServerCertificate=True;User Id=LAPTOP-5LC5ROF4\Uczen;Integrated Security=true;Initial Catalog=Blog;Connection Timeout=4;");
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
