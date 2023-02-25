@@ -10,14 +10,14 @@ namespace ConsoleApp3.Models
     public class Books
     {
         [Key]
-        public int BooksId { get; set; }
+        public int BooksID { get; set; }
      
       //  public int AuthorID{ get; set; }
       // AuthorID jest w tabeli Books a AuthorsID w tabeli Authors
 
-        public string bookName { get; set;}
+        public string? bookName { get; set;}
         //  public Authors AuthorName { get; set; }
-        public Authors Author { get; set; }
+        public Authors? Author { get; set; }
         public int AuthorID { get; set; }
     }
 }

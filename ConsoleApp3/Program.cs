@@ -3,18 +3,26 @@ using ConsoleApp3.Data;
 using ConsoleApp3.Models;
 using Microsoft.IdentityModel.Tokens;
 
+
+var context = new BlogContext();
+var IDofAuthorsDB = context.Authors
+                                    .Where(s => s.AuthorName == "Remigiusz Mróz")
+                                    .ToList();
+
+
+Console.WriteLine(IDofAuthorsDB);
 Console.WriteLine("Hello, World!");
 Console.WriteLine("W księgarni są następujący autorzy: ");
 
-
-
-
 Console.WriteLine("Wybierz nr autora i zatwierdź ENTER");
 
-string IDofAuthor = Console.ReadLine();
+Console.WriteLine();
+
+
+string? IDofAuthor = Console.ReadLine();
 
 Console.WriteLine("Podaj tytół i wciśnij ENTER");
-string title = Console.ReadLine();
+string? title = Console.ReadLine();
 
 int IDAuthorINT = 0;
 IDAuthorINT = Int16.Parse(IDofAuthor);
@@ -31,7 +39,7 @@ if (IDofAuthor != null && title != null)
 
         foreach (var blog in db.Blogs)
         {
-            Console.WriteLine(blog.Name);
+            Console.WriteLine("Zapisano");
         }
     }
 }

@@ -11,7 +11,7 @@ namespace ConsoleApp3.Models
     {
         [Key]
         public int AuthorsID { get; set; }
-        public string AuthorName { get; set; }
+        public string? AuthorName { get; set; }
         public List<Books> Books { get; set; } = new List<Books>(); // relacja 1:n od strony 1 autor : wielu książek
     }
 }
