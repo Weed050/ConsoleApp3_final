@@ -10,7 +10,7 @@ namespace ConsoleApp3.Models
     public class Authors
     {
         [Key]
-        public int AuthorID { get; set; }
+        public int AuthorsID { get; set; }
         public string AuthorName { get; set; }
        
     }

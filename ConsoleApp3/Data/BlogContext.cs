@@ -12,7 +12,7 @@ namespace ConsoleApp3.Data
     public class BlogContext : DbContext
     {
         public DbSet<Blog> Blogs { get; set; }
-        public DbSet<Blog2> Blog2s { get; set; }
+        public DbSet<Books> Blog2s { get; set; }
         public DbSet<Authors> Authors { get; set; }
 
         public BlogContext()

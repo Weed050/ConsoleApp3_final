@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3.Models
 {
-    public class Blog2
+    public class Books
     {
         [Key]
-        public int BlogId { get; set; }
+        public int BooksId { get; set; }
         public Authors AuthorName { get; set; }
-        public int AuthorsID{ get; set; }
+        public int AuthorID{ get; set; } // AuthorID jest w tabeli Blog2 a AuthorsID w tabeli Authors
 
         public string bookName { get; set;}
     }
