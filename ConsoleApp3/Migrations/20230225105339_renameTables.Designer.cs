@@ -3,6 +3,7 @@ using ConsoleApp3.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ConsoleApp3.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    partial class BlogContextModelSnapshot : ModelSnapshot
+    [Migration("20230225105339_renameTables")]
+    partial class renameTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,13 +70,29 @@ namespace ConsoleApp3.Migrations
                     b.Property<int>("AuthorID")
                         .HasColumnType("int");
 
+                    b.Property<int>("AuthorNameAuthorsID")
+                        .HasColumnType("int");
+
                     b.Property<string>("bookName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("BooksId");
 
+                    b.HasIndex("AuthorNameAuthorsID");
+
                     b.ToTable("Books", "domyslna_nazwa_schematu");
+                });
+
+            modelBuilder.Entity("ConsoleApp3.Models.Books", b =>
+                {
+                    b.HasOne("ConsoleApp3.Models.Authors", "AuthorName")
+                        .WithMany()
+                        .HasForeignKey("AuthorNameAuthorsID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AuthorName");
                 });
 #pragma warning restore 612, 618
         }
