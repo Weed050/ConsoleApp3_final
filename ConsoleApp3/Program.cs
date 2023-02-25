@@ -5,12 +5,12 @@ using ConsoleApp3.Models;
 
 Console.WriteLine("Hello, World!");
 Console.WriteLine("W księgarni są następujący autorzy: ");
-
-Console.WriteLine("Wybierz nr autora: ");
+Console.WriteLine();
+Console.WriteLine("Wybierz nr autora i zatwierdź ENTER");
 
 string IDofAuthor = Console.ReadLine();
 
-Console.WriteLine("Podaj tytół");
+Console.WriteLine("Podaj tytół i wciśnij ENTER");
 string title = Console.ReadLine();
 
 int IDAuthorINT = 0;

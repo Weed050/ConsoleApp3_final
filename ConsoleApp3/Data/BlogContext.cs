@@ -25,6 +25,7 @@ namespace ConsoleApp3.Data
             {
                 optionsBuilder.UseSqlServer(@"Server=localhost;TrustServerCertificate=True;User Id=LAPTOP-5LC5ROF4\Uczen;Integrated Security=true;Initial Catalog=Blog;Connection Timeout=4;");
             }
+           
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
