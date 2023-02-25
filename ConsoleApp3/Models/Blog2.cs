@@ -11,7 +11,9 @@ namespace ConsoleApp3.Models
     {
         [Key]
         public int BlogId { get; set; }
-        public string AuthorID { get; set; }
+        public Authors AuthorName { get; set; }
+        public int AuthorsID{ get; set; }
+
         public string bookName { get; set;}
     }
 }
