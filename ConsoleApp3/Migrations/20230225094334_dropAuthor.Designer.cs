@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ConsoleApp3.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20230224190504_addingTableAuthors")]
-    partial class addingTableAuthors
+    [Migration("20230225094334_dropAuthor")]
+    partial class dropAuthor
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3.Models
 {
-    public class Author
+    public class Authors
     {
         [Key]
-        public int AuthorId { get; set; }
+        public int AuthorID { get; set; }
         public string AuthorName { get; set; }
-        public string bookName { get; set;}
+       
     }
 }

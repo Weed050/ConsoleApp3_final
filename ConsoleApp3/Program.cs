@@ -17,7 +17,7 @@ if (IDofAuthor != null && title != null)
 {
     using (var db = new BlogContext())
     {
-        db.Blog2s.Add(new Blog2 { AuthorName = IDofAuthor, bookName = title });
+        db.Blog2s.Add(new Blog2 { AuthorID = IDofAuthor, bookName = title });
         db.SaveChanges();
 
         foreach (var blog in db.Blogs)
