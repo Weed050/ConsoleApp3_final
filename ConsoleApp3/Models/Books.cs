@@ -11,9 +11,13 @@ namespace ConsoleApp3.Models
     {
         [Key]
         public int BooksId { get; set; }
-      //  public Authors AuthorName { get; set; }
-        public int AuthorID{ get; set; } // AuthorID jest w tabeli Books a AuthorsID w tabeli Authors
+     
+      //  public int AuthorID{ get; set; }
+      // AuthorID jest w tabeli Books a AuthorsID w tabeli Authors
 
         public string bookName { get; set;}
+        //  public Authors AuthorName { get; set; }
+        public Authors Author { get; set; }
+        public int AuthorID { get; set; }
     }
 }
