@@ -1,11 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ConsoleApp3.Data;
 using ConsoleApp3.Models;
-
+using Microsoft.IdentityModel.Tokens;
 
 Console.WriteLine("Hello, World!");
 Console.WriteLine("W księgarni są następujący autorzy: ");
-Console.WriteLine();
+
+
+
+
 Console.WriteLine("Wybierz nr autora i zatwierdź ENTER");
 
 string IDofAuthor = Console.ReadLine();
@@ -15,6 +18,9 @@ string title = Console.ReadLine();
 
 int IDAuthorINT = 0;
 IDAuthorINT = Int16.Parse(IDofAuthor);
+
+
+
 
 if (IDofAuthor != null && title != null)
 {
